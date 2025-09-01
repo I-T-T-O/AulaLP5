@@ -23,7 +23,9 @@ public class JDlgUsuarios extends javax.swing.JDialog {
         initComponents();
         setTitle("Cadastro de Usuários");
         setLocationRelativeTo(null);        
-        Util.habilitar(false, jTxtCodigo, jTxtNome, jCboNivel, jBtnAlterar);
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jCboNivel, jFmtCpf, jTxtApelido,
+                jFmtDataDeNascimento,jPwfSenha, jCboNivel, 
+                jChbAtivo,jBtnConfirmar, jBtnCancelar);
         
     }
     
@@ -248,8 +250,10 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
         // TODO add your handling code here:
-
-
+        Util.habilitar(true, jTxtCodigo, jTxtNome, jCboNivel, jBtnAlterar, jFmtCpf, jTxtApelido,
+                jFmtDataDeNascimento,jPwfSenha, jCboNivel, 
+                jChbAtivo,jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(false, jBtnIncluir, jBtnExcluir, jBtnPesquisar, jBtnAlterar);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
@@ -265,7 +269,11 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         // TODO add your handling code here:
- 
+  Util.habilitar(false, jTxtCodigo, jTxtNome, jCboNivel, jBtnAlterar, jFmtCpf, jTxtApelido,
+                jFmtDataDeNascimento,jPwfSenha, jCboNivel, 
+                jChbAtivo,jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(true, jBtnIncluir, jBtnExcluir, jBtnPesquisar, jBtnAlterar);
+        Util.limpar(jTxtApelido, jTxtNome, jTxtCodigo, jPwfSenha, jFmtCpf, jFmtDataDeNascimento);
 
 
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
@@ -278,7 +286,10 @@ public class JDlgUsuarios extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-
+        Util.habilitar(false, jTxtCodigo, jTxtNome, jCboNivel, jBtnAlterar, jFmtCpf, jTxtApelido,
+                jFmtDataDeNascimento,jPwfSenha, jCboNivel, 
+                jChbAtivo,jBtnConfirmar, jBtnCancelar);
+        Util.habilitar(true, jBtnIncluir, jBtnExcluir, jBtnPesquisar, jBtnAlterar);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jTxtCodigoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTxtCodigoFocusLost
